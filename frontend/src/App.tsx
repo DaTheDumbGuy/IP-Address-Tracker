@@ -1,8 +1,8 @@
-import { fetchLocationData } from "./services/geolocationService"
+import { fetchTestData } from "./services/geolocationService"
 
 
 export default function App() {
-  fetchLocationData()
+  fetchTestData()
   .then(data => {
       console.log('Fetched location data:', data);
   })
