@@ -1,3 +1,5 @@
+import GeolocationData from "../types/geolocation";
+
 // src/services/geolocationService.ts
 
 export const fetchTestData = async ()=>{
@@ -6,7 +8,7 @@ export const fetchTestData = async ()=>{
         if(!response.ok){
             throw new Error("Network response was not ok");
         }
-        const data = await response.json();
+        const data:GeolocationData = await response.json();
         return data;
     }catch(err){
         console.log('Error fetching data: ', err);
@@ -16,7 +18,7 @@ export const fetchTestData = async ()=>{
 
 export const fetchLocationData = async () => {
     try {
-        const response = await fetch('http://localhost:5173/api/geolocation');
+        const response = await fetch('/api/geolocation');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

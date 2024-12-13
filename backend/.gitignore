@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Package manager files
+package-lock.json
+yarn.lock
+
+# Build and cache files
+dist/
+.cache/
+
+# Testing
+coverage/
+
+# System and IDE files
+.DS_Store
+.vscode/
+.idea/
+
+# Docker and deployment
+docker-compose.override.yml
+
+# Keys and credentials
+*.key
+*.pem
+*.cert

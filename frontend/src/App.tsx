@@ -1,14 +1,35 @@
-import { fetchTestData } from "./services/geolocationService"
+import { useEffect, useState } from "react";
+import { fetchLocationData } from "./services/geolocationService.ts"
+
 
 
 export default function App() {
-  fetchTestData()
-  .then(data => {
-      console.log('Fetched location data:', data);
-  })
-  .catch(error => {
-      console.error('Error fetching location data:', error);
-  });
+  const [data, setData] = useState();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const locationData = await fetchLocationData();
+            setData(locationData);
+            console.log("Fetched Data: ", locationData);
+        } catch (error:any) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    fetchData();
+  }, []);
+  // fetchLocationData()
+  // .then(data => {
+  //     console.log('Fetched location data:', data);
+  // })
+  // .catch(error => {
+  //     console.error('Error fetching location data:', error);
+  // });
   return (
     <>
       <header>
