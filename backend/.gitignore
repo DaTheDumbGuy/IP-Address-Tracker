@@ -1,34 +1,29 @@
-# Node modules
-node_modules/
-
 # Logs
-logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Environment variables
+# Dependencies
+node_modules
+
+# Local environment files
 .env
-.env.local
 
-# Package manager files
-package-lock.json
-yarn.lock
-
-# Build and cache files
-dist/
-.cache/
-
-# Testing
-coverage/
-
-# System and IDE files
+# OS-specific files
 .DS_Store
+Thumbs.db
+
+# Editor-specific files
 .vscode/
 .idea/
 
-# Docker and deployment
-docker-compose.override.yml
+# Temporary files
+*.suo
+*.njsproj
+*.sln
+*.sw?
 
-# Keys and credentials
-*.key
-*.pem
-*.cert
+# Build files (if using TypeScript or bundlers)
+dist
