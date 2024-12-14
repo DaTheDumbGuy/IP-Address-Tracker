@@ -125,3 +125,6 @@ https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_0zv0dyD5MUmlgi1rUzkwfAc0
         "tor": false
     }
 }
+
+
+https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse#maps_geocoding_reverse-typescript

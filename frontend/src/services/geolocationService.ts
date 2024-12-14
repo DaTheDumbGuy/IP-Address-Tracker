@@ -1,8 +1,10 @@
+import { useState } from "react";
 import GeolocationData from "../types/geolocation";
 
 // src/services/geolocationService.ts
 
 export const fetchTestData = async ()=>{
+
     try{
         const response = await fetch('/api/test');
         if(!response.ok){
@@ -16,9 +18,12 @@ export const fetchTestData = async ()=>{
     }
 }
 
-export const fetchLocationData = async () => {
+export const fetchLocationData = async (inputValue:any) => {
+    console.log(inputValue);
+    const url = inputValue ? `/api/geolocation?ipAddress=${encodeURIComponent(inputValue)}`: '/api/geolocation';
+    console.log(url);
     try {
-        const response = await fetch('/api/geolocation');
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
