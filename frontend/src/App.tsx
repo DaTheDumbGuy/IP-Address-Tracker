@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { fetchLocationData } from "./services/geolocationService.ts"
-
-
+import '../src/assets/styles/stylesmin.css';
+import 'leaflet/dist/leaflet.css';
+import Map from "./components/Map/Map.tsx";
 
 export default function App() {
   const [data, setGeoData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     const fetchData = async () => {
         try {
@@ -86,7 +88,12 @@ export default function App() {
           </div>
           
         </section>
+        
       </main>
+      {!loading && data?.location?.lat && data?.location?.lng && (
+        <Map lat={data.location.lat} lng={data.location.lng} />
+      )}
+
     </>
   )
 }

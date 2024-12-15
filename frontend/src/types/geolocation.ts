@@ -3,7 +3,12 @@ export default interface GeolocationData {
     location: {
         country: string;
         region: string;
+        city:string;
+        lat:number;
+        lng:number;
+        postalCode:string;
         timezone: string;
+        geonameId:number;
     };
     as: {
         asn: number;
@@ -13,4 +18,5 @@ export default interface GeolocationData {
         type: string;
     };
     isp: string;
+    
 }

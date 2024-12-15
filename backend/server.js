@@ -10,16 +10,16 @@ const API_KEY = process.env.API_KEY;
 const API_URL = process.env.API_URL;
 
 const sampleData = {
-    ip: "112.198.134.185",
+    ip: "112.198.132.243",
     location: {
         country: "PH",
-        region: "Bicol",
-        city: "Buluang",
-        lat: 13.5201,
-        lng: 123.3518,
+        region: "Mimaropa",
+        city: "Paluan",
+        lat: 13.416,
+        lng: 120.4623,
         postalCode: "",
         timezone: "+08:00",
-        geonameId: 1722802
+        geonameId: 1695982
     },
     as: {
         asn: 132199,
@@ -28,12 +28,8 @@ const sampleData = {
         domain: "globe.com.ph",
         type: ""
     },
-    isp: "Globe Telecom",
-    proxy: {
-        proxy: false,
-        vpn: false,
-        tor: false
-    }
+    isp: "Globe Telecom"
+
 }
 
 
@@ -48,7 +44,7 @@ app.get('/api/geolocation', async (req, res) => {
         // const ip = ipAddress || req.headers['x-forwarded-for'];
 
         // const response = await axios.get(API_URL, {
-        //     params: { apiKey: API_KEY, ipAddress: ip }, // Pass query parameters
+        //     params: { apiKey: API_KEY, ipAddress: ip },
         // });
 
         // res.status(200).json(response.data);
