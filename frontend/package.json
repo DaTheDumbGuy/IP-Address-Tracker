@@ -3,9 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://dathedumbguy.github.io/IP-Address-Tracker/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "vite build && gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -25,6 +27,7 @@
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "gh-pages": "^6.2.0",
     "globals": "^15.12.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0",

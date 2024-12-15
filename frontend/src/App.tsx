@@ -63,7 +63,7 @@ export default function App() {
           />
           <button type="submit">Search</button>
         </form>
-        {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+        {error && <p style={{ color: "red" }}>{error}</p>}
       </header>
       <main>
         <section>

@@ -4,7 +4,7 @@ import GeolocationData from "../types/geolocation";
 
 export const fetchLocationData = async (inputValue:any) => {
     console.log(inputValue);
-    const url = inputValue ? `/api/geolocation?ipAddress=${encodeURIComponent(inputValue)}`: '/api/geolocation';
+    const url = inputValue ? `${import.meta.env.VITE_API_URL}?ipAddress=${encodeURIComponent(inputValue)}`: `${import.meta.env.VITE_API_URL}`;
     console.log(url);
     try {
         const response = await fetch(url);
