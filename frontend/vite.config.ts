@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/IP-Address-Tracker/', 
   server: {
     proxy: {
-        '/api': 'http://localhost:8080', // Proxy `/api` requests to the backend
+        '/api': 'http://localhost:8080', 
     },
 },
 })
