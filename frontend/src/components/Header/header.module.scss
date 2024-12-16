@@ -1,0 +1,51 @@
+@use '../../assets/scss/base/index' as base;
+.b-header{
+    position: relative;
+    z-index:2;
+    padding:0 1em;
+    color:white;
+
+    &__title{
+        margin:1em 0;
+    }
+    &__form{
+        display:flex;
+        border-radius:10px;
+        overflow: hidden;
+        max-width:339px;
+        margin: auto;
+    }
+    &__input{
+        padding:1.2em;
+        flex:2;
+    }
+    &__button {
+        width: 50px;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        &__icon {
+          width: 11px;
+          height: 14px;
+          background-image: url('../../assets/images/icon-arrow.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+    }
+    &__input, &__button{
+        border:none;
+    }
+}
+
+@media (min-width:768px) {
+    .b-header{
+
+        &__form{
+            width:500px;
+            max-width:unset;
+        }
+    }
+}

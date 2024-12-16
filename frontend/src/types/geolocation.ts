@@ -20,3 +20,11 @@ export default interface GeolocationData {
     isp: string;
     
 }
+export interface showDataProps{
+    ip:string;
+    country:string;
+    region:string;
+    city:string;
+    timezone:string;
+    isp:string;
+} 

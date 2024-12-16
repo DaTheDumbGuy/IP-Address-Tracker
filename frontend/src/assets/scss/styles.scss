@@ -1,10 +1,6 @@
+@use './base/index' as base;
 *,*::before, *::after{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-#map{
-    width:100vw;
-    height:400px;
-    border:2px solid black;
 }

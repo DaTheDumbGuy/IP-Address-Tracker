@@ -1,0 +1,42 @@
+@use './variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    font-family:  "Rubik", sans-serif;
+    font-size:18px;
+    font-weight: 400;
+}
+.b-header{
+    text-align: center;
+
+    &__title{
+        font-size: 1.5rem;
+        font-weight: v.$font-weight-medium;
+    }
+
+    &__input{
+        white-space: nowrap;      
+        overflow: hidden;          
+        text-overflow: ellipsis;
+    }
+}
+
+.b-showData{
+    text-align: center;
+    @media (min-width:768px) {
+        text-align: start;
+    }
+    &__item{
+
+        &__title{
+            font-size:0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight:v.$font-weight-bold;
+        }
+        &__value{
+            font-size:1.2rem;
+            font-weight: v.$font-weight-medium;
+        }
+    }
+}
