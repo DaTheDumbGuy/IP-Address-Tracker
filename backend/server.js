@@ -39,7 +39,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/api/geolocation', async (req, res) => {
     try {
         // Extract ipAddress or domain from query parameter
-        // const { ipAddress } = req.query;
+        const { ipAddress } = req.query;
         // const ip = ipAddress || req.ip;
         const ip = ipAddress || req.headers['x-forwarded-for'];
 
