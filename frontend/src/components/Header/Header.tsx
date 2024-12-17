@@ -1,23 +1,27 @@
 import HeaderProps from "../../types/header";
-import '../../assets/styles/header.modulemin.css';
+import styles from './header.module.scss';
 
 export default function Header({ handleAddress, inputRef, error }: HeaderProps) {
     return (
-        <header className="b-header">
-            <h1 className="b-header__title">IP Address Tracker</h1>
-            <form className="b-header__form" action="" onSubmit={handleAddress}>
+        <header className={styles['b-header']}>
+            <h1 className={styles['b-header__title']}>IP Address Tracker</h1>
+            <form className={styles['b-header__form']} action="" onSubmit={handleAddress}>
                 <input
                     ref={inputRef}
-                    className="b-header__input"
+                    className={styles['b-header__input']}
                     type="text"
                     placeholder="Search for any IP address or domain"
                     aria-label="IP Address"
                 />
-            <button className="b-header__button" type="submit">
-            <i className="b-header__button__icon" aria-label="Search IP Address"></i>
-            </button>
+                <button className={styles['b-header__button']} type="submit">
+                    <span
+                        className={styles['b-header__button__icon']}
+                        role="button"
+                        aria-label="Search IP Address"
+                    ></span>
+                </button>
             </form>
-            {error && <p className="b-header__error">{error}</p>}
+            {error && <p className={styles['b-header__error']}>{error}</p>}
         </header>
     );
 }
