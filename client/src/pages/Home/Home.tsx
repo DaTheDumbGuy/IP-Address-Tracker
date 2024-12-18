@@ -16,7 +16,6 @@ export default function Home(){
             try {
                 const locationData = await fetchLocationData(null);
                 setGeoData(locationData);
-                console.log("Fetched Data: ", locationData)
             } catch (error:any) {
                 setError(error.message);
             } finally {
@@ -46,7 +45,6 @@ export default function Home(){
 
         setGeoData(locationData); // Store the fetched data in state
         setError(null); // Clear any previous error
-        console.log("Fetched Data(Input): ", locationData)
     } catch (err: any) {
         setGeoData(null); // Clear previous data
         setError(err.message || "An unknown error occurred.");

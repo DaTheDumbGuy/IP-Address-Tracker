@@ -1,13 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/IP-Address-Tracker/', 
   server: {
     proxy: {
-        '/api': 'http://localhost:8080', 
+      '/api': {
+        target: 'https://ip-address-tracker-master-gamma-eight.vercel.app',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''), // Optional rewrite for cleaner routes
+      },
     },
   },
-})
+});
