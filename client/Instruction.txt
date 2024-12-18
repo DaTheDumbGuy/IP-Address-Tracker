@@ -88,3 +88,36 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 **Have fun building!** 🚀
 
+-
+
+
+
+
+
+
+
+
+
+
+// const sampleData = {
+//     ip: "112.198.132.243",
+//     location: {
+//         country: "PH",
+//         region: "Mimaropa",
+//         city: "Paluan",
+//         lat: 13.416,
+//         lng: 120.4623,
+//         postalCode: "",
+//         timezone: "+08:00",
+//         geonameId: 1695982
+//     },
+//     as: {
+//         asn: 132199,
+//         name: "GLOBE-MOBILE-5TH-GEN-AS",
+//         route: "112.198.128.0/21",
+//         domain: "globe.com.ph",
+//         type: ""
+//     },
+//     isp: "Globe Telecom"
+
+// }

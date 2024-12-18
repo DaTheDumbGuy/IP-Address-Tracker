@@ -27,3 +27,4 @@ Thumbs.db
 
 # Build files (if using TypeScript or bundlers)
 dist
+.vercel
