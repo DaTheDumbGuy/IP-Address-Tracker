@@ -1,6 +1,7 @@
 export default interface HeaderProps {
     handleAddress:handleAddress;
     inputRef:React.RefObject<HTMLInputElement>;
+    setError: React.Dispatch<React.SetStateAction<string | null>>;
     error: string | null;
 }
 

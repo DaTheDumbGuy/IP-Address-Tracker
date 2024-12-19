@@ -1,7 +1,7 @@
 import HeaderProps from "../../types/header";
 import styles from './header.module.scss';
 
-export default function Header({ handleAddress, inputRef, error }: HeaderProps) {
+export default function Header({ handleAddress, inputRef,setError, error }: HeaderProps) {
     return (
         <header className={styles['b-header']}>
             <h1 className={styles['b-header__title']}>IP Address Tracker</h1>
@@ -9,6 +9,7 @@ export default function Header({ handleAddress, inputRef, error }: HeaderProps) 
                 <input
                     ref={inputRef}
                     className={styles['b-header__input']}
+                    onChange={()=> setError(null)}
                     type="text"
                     placeholder="Search for any IP address or domain"
                     aria-label="IP Address"

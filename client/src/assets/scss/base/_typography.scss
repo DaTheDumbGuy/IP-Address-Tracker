@@ -22,6 +22,9 @@ body{
         overflow: hidden;          
         text-overflow: ellipsis;
     }
+    &__error{
+        font-size: 0.8rem;
+    }
 }
 
 .b-showData{

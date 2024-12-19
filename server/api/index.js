@@ -8,9 +8,7 @@ const app = express();
 const API_KEY = process.env.API_KEY;
 const API_URL = process.env.API_URL;
 
-app.use(cors({
-    origin: ["https://your-client-app.vercel.app"]// Allow specific origins
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

@@ -25,7 +25,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
+        &:hover{
+            cursor: pointer;
+        }
+
         &__icon {
           width: 11px;
           height: 14px;
@@ -38,6 +42,9 @@
     &__input, &__button{
         border:none;
     }
+    &__error{
+        color: #EF4444;
+    }
 }
 
 @media (min-width:768px) {
@@ -46,6 +53,13 @@
         &__form{
             width:500px;
             max-width:unset;
+        }
+        &__error{
+            position: absolute;
+            right:0;
+            left:0;
+            margin:auto;
+            bottom:-15px;
         }
     }
 }

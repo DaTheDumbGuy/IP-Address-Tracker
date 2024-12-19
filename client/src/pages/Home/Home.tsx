@@ -52,7 +52,7 @@ export default function Home(){
     }
     return(
         <>
-        <Header handleAddress={handleAddress} inputRef={inputRef} error={error}/>
+        <Header handleAddress={handleAddress} inputRef={inputRef} setError={setError} error={error}/>
 
         {/* Show Data */}
         <main>
